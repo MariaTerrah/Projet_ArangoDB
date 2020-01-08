@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "arangodb.user",
+  "type": "java.lang.String",
+  "description": "A description for 'arangodb.user'"
+}]}

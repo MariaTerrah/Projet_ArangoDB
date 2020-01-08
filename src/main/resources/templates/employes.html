@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="UTF8"/>
+<title>Requetes&Resultats</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/myStyle.css" />
+</head>
+<body>
+<form th:action="@{/Employee/Index}" method="post">
+	<table class="table table-striped">
+								<tr>
+									<td>Nom</td>
+									<td>:</td>
+										<td><input name="name" type="text" /></td>
+									<td>City</td>
+									<td>:</td>
+										<td><input name="city" type="text" /></td>
+									<td><input value="submit" type="submit" /></td>
+								</tr>
+							</table>
+  </form>
+  
+  <div class="container spacer">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>id</th><th>name</th> <th>city</th><th>age</th><th>salaire</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="g:${employees}">
+					<td th:text="${g.id}"></td>
+					<td th:text="${g.name}"></td>
+					<td th:text="${g.city}"></td>
+					<td th:text="${g.age}"></td>
+					<td th:text="${g.salary}"></td>
+				</tr>
+			</tbody>
+	
+		</table>
+	</div>
+</body>
+</html>
